@@ -10,11 +10,12 @@
     
 </head>
 <body>
+
     <div class="cabecera">
         <div class="container">
             <img id="logo" src="img/logo-blanco.png" alt="">
-            <button><a href="view/login.php" id="naveg">Inicia Sesión</a></button>
-            <button><a href="view/register.php" id="naveg">Registrate</a></button>
+            <button><a href="./View/login.php" id="naveg">Inicia Sesión</a></button>
+            <button><a href="./View/register.php" id="naveg">Registrate</a></button>
         </div>
         
         <a href="./View/pantallaPrincipal.php"><h4>Ingresa como invitado</h4></a>
@@ -43,7 +44,12 @@
         </div>
     </div>
     
+    <?php
 
+    require_once './Config/config.php';
+    require_once './Controller/LoginController.php';
+
+    ?>
 
     <script src="js/index.js"></script>
 </body>

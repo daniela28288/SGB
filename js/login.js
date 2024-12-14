@@ -12,3 +12,4 @@ togglePassword.addEventListener('click', () => {
     togglePassword.src = type === 'password' ? hiddenIcon : visibleIcon;
 });
 
+

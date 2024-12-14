@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,14 +8,23 @@
     <link rel="stylesheet" href="../styles/login.css">
     <link rel="icon" href="../img/logo,color.png">
 </head>
+<?php
+// Incluir el archivo del controlador
+require_once '../Controller/UserController.php';
+
+$controller = new UserController();
+$controller->register();
+
+?>
 <body style="background-image:url(../img/freepik__expand__80654.png); background-position: 0%; background-repeat: no-repeat;">
     <div class="login-wrapper">
         <div class="login-card">
             <div class="brand-logo">
-                <img src="../img/logo-horizontal.png" alt="">
+                <img src="../img/logo-horizontal.png" alt="Logo">
             </div>
+
             <h1 class="title">Registro de usuario</h1>
-            <form action="registro.php" method="POST">
+            <form action="register.php" method="POST">
                 <!-- Campo para el nombre completo -->
                 <div class="floating-input">
                     <input type="text" id="fullname" name="fullname" placeholder=" " required>
@@ -31,9 +41,9 @@
                 <div class="floating-input">
                     <select id="role" name="role" required>
                         <option value="" disabled selected>Seleccione su rol</option>
-                        <option value="bibliotecario">Bibliotecario</option>
-                        <option value="estudiante">Estudiante</option>
-                        <option value="profesor">Profesor</option>
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="Docente">Docente</option>
+                        <option value="Bibliotecario">Bibliotecario</option>
                     </select>
                 </div>
 
@@ -62,6 +72,8 @@
             <p class="helper-text">¿Tienes una cuenta? <a href="./login.php">Inicia sesión aquí</a></p>
         </div>
     </div>
+
     <script src="../js/login.js"></script>
+
 </body>
 </html>

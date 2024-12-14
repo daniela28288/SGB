@@ -44,15 +44,16 @@ foreign key (id_libro) references libros(id),
 foreign key (id_genero) references generos(id)
 );
 
-create table if not exists usuarios(
-id int primary key auto_increment,
-nombre varchar(100) not null,
-numero_documento int unique not null,
-tipo enum("Estudiante","Docente","Bibliotecario") not null,
-telefono varchar(100) null,
-correo_electronico varchar(100) unique not null,
-contrasena varchar(255) not null
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    numero_documento INT UNIQUE NOT NULL,
+    tipo ENUM("Estudiante", "Docente", "Bibliotecario") NOT NULL,
+    telefono VARCHAR(100) NULL,
+    correo_electronico VARCHAR(100) UNIQUE NOT NULL,
+    contrasena VARCHAR(255) NOT NULL
 );
+
 
 create table if not exists prestamos(
 id int primary key auto_increment,
@@ -150,3 +151,14 @@ INSERT INTO libros (
  Select * from autores;
 
 
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Puedes agregar un usuario de ejemplo
+INSERT INTO users (username, password) VALUES
+('admin', PASSWORD('12345'));
+
+select * from usuarios;
