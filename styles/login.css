@@ -1,0 +1,174 @@
+/* Fondo general */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0%;
+}
+
+/* Wrapper */
+.login-wrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Tarjeta de login */
+.login-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+/* Logo de la marca */
+.brand-logo {
+    font-size: 50px;
+    color: #AA0E5D;
+    margin-bottom: 10px;
+}
+.brand-logo img{
+    width: 200px;
+}
+/* Título */
+.title {
+    font-size: 20px;
+    color: #303030;
+    margin-bottom: 30px;
+    font-weight: 100;
+}
+
+/* Campos flotantes */
+.floating-input {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.floating-input input {
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-input input:focus {
+    border-color: #3972b7;
+    background: #ffffff;
+}
+
+.floating-input label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 14px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.floating-input input:focus + label,
+.floating-input input:not(:placeholder-shown) + label {
+    top: -15px;
+    left: 1px;
+    font-size: 12px;
+    color: #3972b7;
+}
+
+/* Contraseña con ojo */
+.password-input {
+    position: relative;
+}
+
+/* Ajustar el ícono del ojo */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.toggle-password:hover {
+    color: #3972b7;
+}
+
+/* Botón de login */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #3972b7, #AA0E5D);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto de ayuda */
+.helper-text {
+    
+    font-size: 14px;
+    color: #555;
+    margin-top: 40px;
+}
+
+.helper-text a {
+    color: #AA0E5D;
+    text-decoration: none;
+}
+
+.helper-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* estilos de la vista de registro */
+select {
+    width: 105%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #969595;
+    background: #f9f9f9;
+}
+
+select:focus {
+    border-color: #3972b7;
+    outline: none;
+}
+
