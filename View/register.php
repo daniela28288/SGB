@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,14 +7,6 @@
     <link rel="stylesheet" href="../styles/login.css">
     <link rel="icon" href="../img/logo,color.png">
 </head>
-<?php
-// Incluir el archivo del controlador
-require_once '../Controller/UserController.php';
-
-$controller = new UserController();
-$controller->register();
-
-?>
 <body style="background-image:url(../img/freepik__expand__80654.png); background-position: 0%; background-repeat: no-repeat;">
     <div class="login-wrapper">
         <div class="login-card">

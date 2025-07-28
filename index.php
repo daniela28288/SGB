@@ -43,13 +43,7 @@
             <button class="next" onclick="moverCarrusel(1)">&#10095;</button>
         </div>
     </div>
-    
-    <?php
 
-    require_once './Config/config.php';
-    require_once './Controller/LoginController.php';
-
-    ?>
 
     <script src="js/index.js"></script>
 </body>

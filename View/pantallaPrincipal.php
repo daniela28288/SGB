@@ -47,26 +47,6 @@
         <div id="searchResults" class="results-container"></div>
     </div>
 
-<!-- 
-    <div class="container">
-        <div class="search-box">
-            <form action="#" method="get" onsubmit="showResults(event)">
-                <input type="text" name="query" placeholder="Escribe tu búsqueda..." required>
-                <button type="submit">Buscar</button>
-            </form>
-        </div>
-        
-        
-        <div class="results" id="results">
-            <strong>Resultados:</strong>
-            <ul>
-                <li>Resultado 1</li>
-                <li>Resultado 2</li>
-                <li>Resultado 3</li>
-            </ul>
-        </div>
-    </div> -->
-
 
      <div class="container-banner">
          <img src="../img/banner1233.png" alt=""> 
