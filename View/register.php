@@ -15,7 +15,8 @@
             </div>
 
             <h1 class="title">Registro de usuario</h1>
-            <form action="register.php" method="POST">
+            <form action="../insertUser.php" method="POST">
+
                 <!-- Campo para el nombre completo -->
                 <div class="floating-input">
                     <input type="text" id="fullname" name="fullname" placeholder=" " required>

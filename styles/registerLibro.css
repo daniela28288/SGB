@@ -1,0 +1,18 @@
+.modal {
+    display: none;
+    top: 40%;
+    left: 43%;
+}
+
+.btnAgregar {
+    padding: 10px;
+    background-color: pink;
+    width: 120px;
+    cursor: pointer;
+    text-align: center
+}
+
+.modal h4{
+    color: red;
+    cursor: pointer;
+}

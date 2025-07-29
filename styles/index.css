@@ -74,28 +74,11 @@ button{
     font-size: 18px;
 }
 
-.carruselLibros{
-    display: flex;
-    margin-left: 50px;
-    align-items: center;
-    margin-top: 50px;
-    gap: 30px;
-}
-.carruselLibros img{
-    width: 150px;
-    height: 200px;
-    border-radius: 4px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.carruselLibros img:hover{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px white;
-}
 
 
 .carrusel-container {
   position: relative;
-  width: 500px; 
+  width: 750px; 
   margin-left: 50px;
   margin-top: 30px;
   overflow: hidden; 
@@ -128,4 +111,5 @@ button{
 
 .carrusel img {
   transition: transform 0.5s ease, opacity 0.5s ease;
+  width: 200px;
 }

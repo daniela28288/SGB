@@ -28,6 +28,7 @@
             <div class="libros"><img src="img/BOULEVARD 🌈🚬💫.jfif" alt=""></div>
             <div class="libros"><img src="img/descarga (7).jfif" alt=""></div>
         </div> -->
+        
         <div class="carrusel-container">
             <div class="carrusel">
                 <img src="img/15 Libros para leer en un fin de semana; no todo es Netflix.jpg" alt="Libro 1" class="imagen">
@@ -38,6 +39,7 @@
                 <img src="img/Libros que todas amamos y que este a+¦o ser+ín pel+¡culas.jpg" alt="Libro 6" class="imagen">
                 <img src="img/ee481afe-98e2-4743-a58f-1650841dd894.jpg" alt="Libro 7" class="imagen">
             </div>
+
             <br><br>
             <button class="prev" onclick="moverCarrusel(-1)">&#10094;</button>
             <button class="next" onclick="moverCarrusel(1)">&#10095;</button>

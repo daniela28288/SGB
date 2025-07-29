@@ -1,3 +1,14 @@
+<?php
+session_start(); 
+require '../conexion.php';
+
+if (!isset($_SESSION['nombre'])) {
+    header("Location: ../view/login.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +45,7 @@
         </div>
         <div class="usuario">
             <img class="iconUser" src="../img/icons8-usuario-96.png" alt="">
-            <button id="boton-logout">Cerrar sesion</button>
+            <a href="../logout.php" id="boton-logout">Cerrar sesion</a>
         </div>
     </div>
 
@@ -55,79 +66,44 @@
     <div class="catalogo-libros">
         <h2>Catalogo de libros</h2>
 
+          
+          <?php if ($_SESSION['rol'] == "Bibliotecario") { ?>
+            <div class="tools">
+                <a href="registerLibro.php">
+                    Agregar libro
+                </a>
+            </div>
+           <?php } ?>
+        
+
         <div class="imagenes">
+
+            <?php
+                $stmt = $pdo->query("SELECT * FROM libros");
+                $libros = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                if (empty($libros)){ ?>
+
+                    <h3 style ="color: gray; font-weight: 100">No hay libros disponibles</h3>
+
+              <?php  }
+
+                foreach ($libros as $libro):
+            ?>
             <div class="libro">
                 <div class="imagen">
-                    <img src="../img/15 Libros que le+¡ste antes de cumplir 17 a+¦os y jam+ís olvidar+ís.jpg" alt="">
+                    <img src="<?= '../' . $libro['imagen']?>" alt="">
                 </div>
-                <h5>Las ventajas de ser...</h5>
+                <h5><?= $libro['titulo'] ?></h5>
                 <div class="descripcion">
-                    Narra la historia de Charlie, un adolescente tímido y sensible que atraviesa su primer año de preparatoria...
+                    <?= $libro['descripcion'] ?>
                 </div>
                 <button id="boton-prestar">Prestar libro</button>
             </div>
-            <div class="libro">
-                <div class="imagen">
-                    <img src="../img/Bajo la misma estrella, de John Green, excelente libro para adolescentes.jpg" alt="">
-                </div>
-                <h5>Bajo la misma estrella</h5>
-                <div class="descripcion">
-                    Cuenta la historia de Hazel Grace, una joven que lucha contra el cáncer, y Augustus Waters, un chico que también...
-                </div>
-                <button id="boton-prestar">Prestar libro</button>
-            </div>
-            <div class="libro">
-                <div class="imagen">
-                    <img src="../img/Book cover children illustration.jpg" alt="">
-                </div>
-                <h5>Las aventuras de Nic...</h5>
-                <div class="descripcion">
-                    Cuenta las peripecias de dos amigos inseparables, Nico y Nacho, quienes viven emocionantes y divertidas...
-                </div>
-                <button id="boton-prestar">Prestar libro</button>
-            </div>
-            <div class="libro">
-                <div class="imagen">
-                    <img src="../img/15 Libros para leer en un fin de semana; no todo es Netflix.jpg" alt="">
-                </div>
-                <div class="descripcion">
-                    Obra escrita por Antoine de Saint-Exupéry que cuenta la historia de un pequeño príncipe que viaja de 
-                    planeta en planeta...
-                </div>
-                <h5>El principito</h5>
-                <button id="boton-prestar">Prestar libro</button>
-            </div>
-            <div class="libro">
-                <div class="imagen">
-                    <img src="../img/BOULEVARD ­ƒîê­ƒÜ¼­ƒÆ½.jpg" alt="">
-                </div>
-                <h5>Boulevar</h5>
-                <div class="descripcion">
-                    Novela romántica que narra la historia de amor entre dos personajes muy distintos: Luciana, una joven con un pasado...
-                </div>
-                <button id="boton-prestar">Prestar libro</button>
-            </div>
-            <div class="libro">
-                <div class="imagen">
-                    <img src="../img/ee481afe-98e2-4743-a58f-1650841dd894.jpg" alt="">
-                </div>
-                <h5>Matilda</h5>
-                <div class="descripcion">
-                    Cuenta la historia de una niña excepcionalmente inteligente y talentosa llamada Matilda, que vive con unos padres negligentes y crueles...
-                </div>
-                <button id="boton-prestar">Prestar libro</button>
-            </div>
-            <div class="libro">
-                <div class="imagen">
-                    <img src="../img/Libros que todas amamos y que este a+¦o ser+ín pel+¡culas.jpg" alt="">
-                </div>
-                <h5>Mujercitas</h5>
-                <div class="descripcion">
-                    Narra la historia de las hermanas March-Meg, Jo, Beth y Amy-quienes crecen en Massachusetts durante la Guerra Civil de Estados Unidos...
-                </div>
-                <button id="boton-prestar">Prestar libro</button>
-            </div>
+
+            <?php endforeach; ?>
         </div>
+
     </div>
 
     <footer>
