@@ -185,6 +185,48 @@ button:hover {
     align-items: center;
     gap: 20px;
 }
+
+.tools{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.btnTools{
+    padding: 10px 15px;
+    background-color: #6f97c9;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* width: 130px; */
+    margin-right: 20px;
+}
+
+#libro:hover{
+    background-color: #4c6e97;
+}
+
+.autor{
+    background-color: rgb(119, 185, 119);
+}
+
+.autor:hover{
+    background-color: rgb(75, 138, 75);
+}
+
+.genero{
+    background-color: #be76ac;
+}
+
+.genero:hover{
+    background-color: #8f4c7e;
+}
+.tools a{
+    color: white;
+    text-decoration: none;
+}
 .libro{
     position: relative;
     display: flex;

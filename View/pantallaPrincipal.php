@@ -69,8 +69,19 @@ if (!isset($_SESSION['nombre'])) {
           
           <?php if ($_SESSION['rol'] == "Bibliotecario") { ?>
             <div class="tools">
-                <a href="registerLibro.php">
+                <a href="registerLibro.php" class="btnTools" id="libro">
+                    <img src="../img/icons8-añadir-30.png" alt="" style="width:15px; height: 15px">
                     Agregar libro
+                </a>
+
+                <a href="registerLibro.php" class="btnTools autor">
+                    <img src="../img/icons8-añadir-30.png" alt="" style="width:15px; height: 15px">
+                    Autores
+                </a>
+
+                <a href="registerLibro.php" class="btnTools genero">
+                    <img src="../img/icons8-añadir-30.png" alt="" style="width:15px; height: 15px">
+                    Generos
                 </a>
             </div>
            <?php } ?>
@@ -133,7 +144,7 @@ if (!isset($_SESSION['nombre'])) {
                 <div class="social-icons">
                     <a href="#"><img src="../img/icons8-facebook-nuevo-50.png" alt="Facebook"></a>
                     <a href="#"><img src="../img/icons8-twitter-50.png" alt="Twitter"></a>
-                    <a href="#"><img src="../img/icons8-whatsapp-50.png" alt="Whatsapp"></a>
+                    <a href="https://wa.me/573024581882"><img src="../img/icons8-whatsapp-50.png" alt="Whatsapp"></a>
                 </div>
             </div>
         </div>

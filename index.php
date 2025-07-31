@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="img/logo,color.png">
     <title>Pantalla principal</title>
     <link rel="stylesheet" href="styles/index.css">
-    
 </head>
 <body>
 
